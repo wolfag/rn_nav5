@@ -5,6 +5,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  containerBg: {
+    flex: 1,
+    backgroundColor: '#009387',
+  },
 });
 
 export default styles;

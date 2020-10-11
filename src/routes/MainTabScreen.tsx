@@ -89,7 +89,7 @@ const HomeStackScreen: React.FC = () => {
               name="ios-menu"
               size={25}
               backgroundColor="#009387"
-              onPress={() => {}}
+              onPress={navigation.toggleDrawer}
             />
           ),
         }}
@@ -120,7 +120,7 @@ const DetailsStackScreen: React.FC = () => {
               name="ios-menu"
               size={25}
               backgroundColor="#1f65ff"
-              onPress={() => {}}
+              onPress={navigation.toggleDrawer}
             />
           ),
         }}
