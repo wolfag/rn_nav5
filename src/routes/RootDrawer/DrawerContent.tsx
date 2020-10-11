@@ -18,8 +18,9 @@ import {
   TouchableRipple,
   Switch,
 } from 'react-native-paper';
-import {AuthContext} from '../../components/context';
+import {AppContext} from '../../components/context';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import {Types} from '../../reducer';
 
 const imgUri = 'https://api.adorable.io/avatars/50/abott@adorable.png';
 
@@ -28,7 +29,7 @@ const DrawerContent: React.FC<DrawerContentComponentProps<
 >> = (props) => {
   const {navigation} = props;
   const paperTheme = useTheme();
-  const {logout, toggleTheme} = useContext(AuthContext);
+  const {dispatch} = useContext(AppContext);
 
   return (
     <View style={styles.container}>
@@ -152,7 +153,7 @@ const DrawerContent: React.FC<DrawerContentComponentProps<
             />
           )}
           label="Sign Out"
-          onPress={logout}
+          onPress={dispatch({type: Types.LOGOUT})}
         />
       </Drawer.Section>
     </View>
